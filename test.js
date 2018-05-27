@@ -31,9 +31,9 @@ describe("Countdown", () => {
     });
   });
 
-  describe("if n is 2", () => {
+  describe("if n is 3", () => {
     let resolved = false;
-    const countdown = Countdown(2);
+    const countdown = Countdown(3);
     countdown.promise.then(() => {
       resolved = true;
     });
@@ -42,15 +42,15 @@ describe("Countdown", () => {
       assert(!resolved);
     });
 
-    it("is not resolved after 1 counts", done => {
-      countdown.count();
+    it("is not resolved after 2 counts", done => {
+      countdown.count().count();
       setTimeout(() => {
         assert(!resolved);
         done();
       });
     });
 
-    it("resolves after 2 counts", done => {
+    it("resolves after 3 counts", done => {
       assert(!resolved);
       countdown.count();
       setTimeout(() => {

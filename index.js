@@ -5,14 +5,14 @@ const createDeferred = require("p-defer");
 module.exports = i => {
   const deferred = createDeferred();
 
-  const count = () => {
+  const ret = {};
+
+  ret.promise = deferred.promise;
+  ret.count = () => {
     --i;
     if (i === 0) deferred.resolve();
-    return this;
+    return ret;
   };
 
-  return {
-    promise: deferred.promise,
-    count
-  };
+  return ret;
 };
