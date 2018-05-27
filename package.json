@@ -1,12 +1,17 @@
 {
   "name": "countdown-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a Promise that resolves after n counts",
   "main": "index.js",
   "scripts": {
     "test": "mocha test.js"
   },
-  "keywords": ["countdown", "promise", "lazy", "delayed"],
+  "keywords": [
+    "countdown",
+    "promise",
+    "lazy",
+    "delayed"
+  ],
   "author": {
     "name": "Gerardo Munguia",
     "email": "<gerardo.munguia.hoyo@gmail.com>",
