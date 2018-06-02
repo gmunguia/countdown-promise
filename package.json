@@ -27,5 +27,6 @@
   },
   "dependencies": {
     "p-defer": "^1.0.0"
-  }
+  },
+  "repository": "gmunguia/countdown-promise"
 }
