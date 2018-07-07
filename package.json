@@ -4,7 +4,10 @@
   "description": "Create a Promise that resolves after n counts",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "test:report": "npm test -- --reporter mocha-junit-reporter",
+    "coverage": "nyc npm test",
+    "coverage:report": "npm run coverage && nyc report --reporter=lcovonly"
   },
   "keywords": [
     "countdown",
@@ -14,7 +17,7 @@
   ],
   "author": {
     "name": "Gerardo Munguia",
-    "email": "<gerardo.munguia.hoyo@gmail.com>",
+    "email": "<gerardomunguiahoyo@gmail.com>",
     "url": "gmunguia.com"
   },
   "license": "MIT",
@@ -23,6 +26,8 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.5.0",
     "mocha": "^5.0.0",
+    "mocha-junit-reporter": "^1.17.0",
+    "nyc": "^12.0.2",
     "prettier": "1.10.2"
   },
   "dependencies": {
